@@ -1,7 +1,8 @@
 "# replication_climate_IAM" 
 "# replication_climate_IAM" 
 
-Der vorliegende Code ist eine Replikationsstudie zu dem Papier "Optimal Climate Policy As If Transition Matter" (https://www.cesifo.org/en/publications/2022/working-paper/optimal-climate-policy-if-transition matters#:~:text=The%20optimal%20transition%20to%20a,and%20economic%20and%20climatic%20shocks.)
+Der vorliegende Code ist eine Replikationsstudie zu dem Papier "Optimal Climate Policy As If Transition Matters" von Emanuele Campiglio, Simon Dietz, Frank Venmans (2024) (https://www.cesifo.org/en/publications/2022/working-paper/optimal-climate-policy-if-transition matters#:~:text=The%20optimal%20transition%20to%20a,and%20economic%20and%20climatic%20shocks.)
+
 
 # Verbale Zusammenfassung des Modells
 
@@ -11,4 +12,4 @@ Campiglio, Dietz und Venmans haben ein dynamisches stochastisches allgemeines Gl
 	
 Die Ergebnisse des Modells zeigen, dass der optimale Übergang zu einer kohlenstoffarmen Wirtschaft schnell erfolgen sollte. Von 2020 bis 2030 sollten die Emissionen etwa halbiert werden, unabhängig davon, ob das Ziel die Maximierung der diskontierten Nutzen der Emissionsreduktion oder die Begrenzung der Erwärmung auf 1,5°C ist. Dies erfordert einen hohen CO2-Preis und die aktive Stilllegung schmutziger Anlagen wie Kohlekraftwerke (Desinvestment).
 
-In der Replikation der Studie ist es mein Ziel, die optimale Rate des Desinvestments zu berechnen, sowie die dadurch entstehenden Kosten (Verluste von Ressourcen durch Abriss und Stilllegung - "stranded assets")  
+In der Replikation der Studie ist es mein Ziel, die optimale Rate des Desinvestments zu berechnen, sowie die dadurch entstehenden Kosten (Verluste von Ressourcen durch Abriss und Stilllegung - "stranded assets") zu schätzen. Dafür vereinfache ich das originale Modell, ähnlich dem "straw man model" aus dem angegebenen Papier. Ich löse das vereinfachte Modell in Python unter Anwendung der odeint-Funktion aus dem SciPy Paket. Diese Funktion wendet den LSODA (Livermore Solver for Irdniary Differential Equations with Automatic method switching for stiff and nonstiff problems) Algorithmus an. Dieser Algorithmus wählt automatisch zwischen der Adams-Bashforth Methode und Backward Differentiation Verfahren, je nach Beschaffenheit des Differentialgleichungssystems.
